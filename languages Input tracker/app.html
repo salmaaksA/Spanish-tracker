@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Spanish Immersion Tracker</title>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div class="app-card">
+        <div class="header">
+            <h1>¡Hola, Reina! ✨</h1>
+            <div class="streak-badge">🍦 <span id="streak-count">0</span> Day Streak</div>
+        </div>
+
+        <div class="section-label">Today's Goal: 80 min</div>
+        <div class="daily-container">
+            <svg class="progress-ring" width="180" height="180">
+                <circle class="ring-bg" r="75" cx="90" cy="90"/>
+                <circle class="ring-fill-day" id="day-bar" r="75" cx="90" cy="90"/>
+            </svg>
+            <div class="inner-content">
+                <span id="day-left">80</span>
+                <small>min left</small>
+            </div>
+        </div>
+
+        <div class="grand-goal-area">
+            <div class="section-label">Grand Journey: 50 Hours</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="grand-fill"></div>
+            </div>
+            <p id="grand-stats">0.0 / 50 hrs completed</p>
+        </div>
+
+        <div class="controls">
+            <input type="number" id="minutes-input" placeholder="Add minutes...">
+            <button class="add-btn" onclick="addTime()">Log Session 🎀</button>
+            <button class="reset-link" onclick="resetApp()">Reset All Data</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
